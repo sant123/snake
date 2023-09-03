@@ -1,0 +1,66 @@
+:root {
+  --game-board-size: 50;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  align-items: center;
+  background: black;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+}
+
+.game-board {
+  background: white;
+  border: 1px black solid;
+  display: grid;
+  height: 800px;
+  width: 800px;
+  grid-template-rows: repeat(var(--game-board-size), 1fr);
+  grid-template-columns: repeat(var(--game-board-size), 1fr);
+}
+
+.snake {
+  background: green;
+  border: 1px black solid;
+}
+
+.food {
+  background: orange;
+  border: 1px black solid;
+}
+
+.score {
+  color: white;
+  left: 10px;
+  position: absolute;
+  top: 10px;
+}
+
+.score--better {
+  color: greenyellow;
+}
+
+.game-over {
+  align-items: center;
+  background: darkolivegreen;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  position: absolute;
+  width: 80%;
+}
+
+.game-over--hide {
+  display: none;
+}
+
+.game-over .game-over__cta {
+  width: 100px;
+}
